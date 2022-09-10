@@ -13,7 +13,7 @@ import Dalmore from './Three/Dalmore';
 
 function Hero() {
   return (
-    <section className="h-screen w-screen">
+    <section className="h-screen w-full">
       <Canvas>
         <Suspense fallback={null}>
           <Dalmore />

@@ -8,6 +8,31 @@ import redkin from '../assets/images/redkin-1-1.jpg';
 import MoreButton from './MoreButton';
 
 function Services() {
+  const sectionVariants: Variants = {
+    initial: { opacity: 0, x: 500 },
+    animate: {
+      x: -30,
+      opacity: 1,
+      transition: {
+        when: 'beforeChildren',
+        type: 'spring',
+        bounce: 0.4,
+        duration: 1,
+      },
+    },
+  };
+
+  const paraVariants = {
+    initial: { x: 50, opacity: 0 },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+      },
+    },
+  };
+
   const settings = {
     dots: true,
     infinite: true,

@@ -3,8 +3,33 @@ import React from 'react';
 import MoreButton from './MoreButton';
 
 function Contact() {
+  const sectionVariants: Variants = {
+    initial: { opacity: 0, x: 500 },
+    animate: {
+      x: -30,
+      opacity: 1,
+      transition: {
+        when: 'beforeChildren',
+        type: 'spring',
+        bounce: 0.4,
+        duration: 1,
+      },
+    },
+  };
+
+  const paraVariants = {
+    initial: { x: 50, opacity: 0 },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+      },
+    },
+  };
+
   return (
-    <section id="contact" className="contact h-screen w-full">
+    <section id="contact" className="contact h-screen sm:w-1/2 w-full">
       <header className="pt-8">
         <h2 className="text-5xl text-left text-white">Contact</h2>
       </header>

@@ -6,14 +6,18 @@ function Header() {
   const navRef = useRef<HTMLElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    buttonRef.current?.addEventListener('click', () => {
-      navRef.current?.classList.toggle('hidden');
-    });
-  }, [navRef, buttonRef]);
+  // useEffect(() => {
+  //     buttonRef.current?.addEventListener('click', () => {
+
+  //   });
+  // }, [navRef, buttonRef]);
+
+  const toggle = () => {
+    navRef.current?.classList.toggle('hidden');
+  };
 
   return (
-    <header className="bg-slate-700 static">
+    <header className="bg-slate-700 static w-full">
       <div className=" text-white flex justify-between items-center max-w-6xl mx-auto px-5">
         {/* navbar */}
         <div className="flex">
@@ -81,6 +85,7 @@ function Header() {
               strokeWidth="1.5"
               stroke="#ca8a04"
               className="w-6 h-6"
+              onClick={toggle}
             >
               <path
                 strokeLinecap="round"
