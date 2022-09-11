@@ -1,16 +1,8 @@
 /* eslint-disable react/button-has-type */
-// import gsap from 'gsap';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 function Header() {
   const navRef = useRef<HTMLElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-
-  // useEffect(() => {
-  //     buttonRef.current?.addEventListener('click', () => {
-
-  //   });
-  // }, [navRef, buttonRef]);
 
   const toggle = () => {
     navRef.current?.classList.toggle('hidden');
@@ -23,48 +15,52 @@ function Header() {
         <div className="flex">
           <div className="items-center py-3 w-32 mr-3">
             <a href="/#">
-              <img className="fill-white" src="/ASGV_Logo_Rev.png" alt="Logo" />
+              <img
+                className="fill-white pt-0.5"
+                src="/ASGV_Logo_Rev.png"
+                alt="Logo"
+              />
             </a>
           </div>
           <nav className="hidden md:flex items-center text-yellow-600">
             <a
-              className="py-3 px-3  hover:text-white active:text-yellow-900"
+              className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
               href="#/"
             >
               Home
             </a>
             <a
-              className="py-3 px-3  hover:text-white active:text-yellow-900"
+              className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
               href="#/cgi"
             >
               CGI
             </a>
             <a
-              className="py-3 px-3  hover:text-white active:text-yellow-900"
+              className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
               href="#/dap"
             >
               DAP
             </a>
             <a
-              className="py-3 px-3  hover:text-white active:text-yellow-900"
+              className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
               href="#/spins"
             >
               Spins
             </a>
             <a
-              className="py-3 px-3 hover:text-white active:text-yellow-900"
+              className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
               href="#/photography"
             >
               Photography
             </a>
             <a
-              className="py-3 px-3 hover:text-white active:text-yellow-900"
+              className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
               href="#/design"
             >
               Design
             </a>
             <a
-              className="py-3 px-3 hover:text-white active:text-yellow-900"
+              className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
               href="#/about"
             >
               About
@@ -73,11 +69,7 @@ function Header() {
         </div>
         <div className="hidden md:flex items-center space-x-4">&nbsp;</div>
         <div className="md:hidden flex items-center">
-          <button
-            title="Nav Button"
-            className="mobile-nav-button"
-            ref={buttonRef}
-          >
+          <button title="Nav Button" className="mobile-nav-button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -96,26 +88,29 @@ function Header() {
           </button>
         </div>
       </div>
-      <nav ref={navRef} className="mobile-nav hidden  text-white md:hidden">
-        <a className="block py-3 px-3" href="#/">
+      <nav
+        ref={navRef}
+        className="absolute z-50 w-full top-10 left-0 bg-slate-700 opacity-75 mobile-nav hidden  text-white md:hidden"
+      >
+        <a className="block py-2 px-5" href="#/">
           Home
         </a>
-        <a className="block py-3 px-3" href="#/cgi">
-          CGI
+        <a className="block py-2 px-5" href="#/cgi">
+          Computer Generated Images
         </a>
-        <a className="block py-3 px-3" href="#/dap">
+        <a className="block py-2 px-5" href="#/dap">
           Digital Asset Pipeline
         </a>
-        <a className="block py-3 px-3" href="#/spins">
-          Spins
+        <a className="block py-2 px-5" href="#/spins">
+          Product Spins
         </a>
-        <a className="block py-3 px-3" href="#/photography">
-          Photography
+        <a className="block py-2 px-5" href="#/photography">
+          Photography and Retouch
         </a>
-        <a className="block py-3 px-3" href="#/design">
-          Design
+        <a className="block py-2 px-5" href="#/design">
+          Design, Packaging and Web
         </a>
-        <a className="block py-3 px-3" href="#/about">
+        <a className="block py-2 px-5" href="#/about">
           About
         </a>
       </nav>

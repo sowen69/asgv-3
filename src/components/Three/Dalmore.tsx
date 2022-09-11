@@ -7,6 +7,7 @@ import { Mesh, MeshStandardMaterial } from 'three';
 import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { GLTF } from 'three-stdlib';
+import { useFrame } from '@react-three/fiber';
 import { Clay } from './Materials';
 
 type GLTFResult = GLTF & {
@@ -22,33 +23,45 @@ type GLTFResult = GLTF & {
   };
 };
 const clay = Clay();
+
 export default function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/Dalmore1.gltf') as GLTFResult;
+  const mesh = useRef<Mesh | null>(null);
+
+  useFrame(({ clock }) => {
+    const a = clock.getElapsedTime();
+
+    if (mesh.current) {
+      mesh.current.rotation.z = a;
+      // mesh.current.rotation.y = a / 2;
+    }
+  });
   return (
     <group {...props} dispose={null}>
-      <group name="Scene" scale={[0.02, 0.02, 0.02]} position={[0, -1, 0]}>
+      <group name="Scene" scale={[0.02, 0.02, 0.02]} position={[0, -1.5, 0]}>
         <group name="dalmore" rotation={[Math.PI / 2, 0, 0]}>
-          <mesh
+          {/* <mesh
             name="dalmore_1"
             castShadow
             receiveShadow
             geometry={nodes.dalmore_1.geometry}
-            material={clay}
-          />
+            material={materials.initialShadingGroup}
+          /> */}
           <mesh
             name="dalmore_2"
             castShadow
             receiveShadow
             geometry={nodes.dalmore_2.geometry}
-            material={clay}
+            material={materials.standardSurface5SG}
+            ref={mesh}
           />
-          <mesh
+          {/* <mesh
             name="dalmore_3"
             castShadow
             receiveShadow
             geometry={nodes.dalmore_3.geometry}
-            material={clay}
-          />
+            material={materials.standardSurface5SG}
+          /> */}
         </group>
       </group>
     </group>
