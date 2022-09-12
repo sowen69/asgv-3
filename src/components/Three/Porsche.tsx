@@ -91,7 +91,7 @@ type GLTFResult = GLTF & {
 };
 
 export default function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/porche.glb') as GLTFResult;
+  const { nodes, materials } = useGLTF('/asgv-3/porche.glb') as GLTFResult;
 
   const mesh = useRef<THREE.Group | null>(null);
 
@@ -375,4 +375,4 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
   );
 }
 
-useGLTF.preload('/porche.glb');
+useGLTF.preload('/asgv-3/porche.glb');
