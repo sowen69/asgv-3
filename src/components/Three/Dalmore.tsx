@@ -19,7 +19,7 @@ type GLTFResult = GLTF & {
 };
 
 export default function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/Dalmore2.glb') as GLTFResult;
+  const { nodes, materials } = useGLTF('/asgv-3/Dalmore2.glb') as GLTFResult;
   const mesh = useRef<Mesh | null>(null);
 
   useFrame(({ clock }) => {

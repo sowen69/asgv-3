@@ -5,7 +5,7 @@ function ASGVFooter() {
         <div className="block w-full">
           <img
             className="block items-center fill-white pb-3"
-            src="/ASGV_Logo_Rev.png"
+            src="/asgv-3/ASGV_Logo_Rev.png"
             alt="Logo"
           />
         </div>
