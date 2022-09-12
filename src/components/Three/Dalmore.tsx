@@ -46,4 +46,4 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
   );
 }
 
-useGLTF.preload('/Dalmore2.glb');
+useGLTF.preload('/asgv-3/Dalmore2.glb');

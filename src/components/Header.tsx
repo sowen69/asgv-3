@@ -17,7 +17,7 @@ function Header() {
             <a href="/#">
               <img
                 className="fill-white pt-0.5"
-                src="/ASGV_Logo_Rev.png"
+                src="/asgv-3/ASGV_Logo_Rev.png"
                 alt="Logo"
               />
             </a>
