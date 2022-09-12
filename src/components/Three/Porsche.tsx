@@ -6,6 +6,8 @@ import * as THREE from 'three';
 import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { GLTF } from 'three-stdlib';
+import { useFrame } from '@react-three/fiber';
+import { Mesh } from 'three';
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -90,226 +92,279 @@ type GLTFResult = GLTF & {
 
 export default function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/porche.glb') as GLTFResult;
+
+  const mesh = useRef<Group | null>(null);
+
+  useFrame(({ clock }) => {
+    const a = clock.getElapsedTime();
+
+    if (mesh.current) {
+      mesh.current.rotation.z = a / 2;
+      // mesh.current.rotation.y = a / 2;
+    }
+  });
   return (
     <group {...props} dispose={null}>
-      <group rotation={[Math.PI / 2, 0, 0]}>
+      <group
+        rotation={[Math.PI / 2, 0, 0]}
+        ref={mesh}
+        scale={0.2}
+        position={[0, -2, -35]}
+      >
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_1.geometry}
           material={materials['Ground Material']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_2.geometry}
           material={materials['07 - Default3243']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_3.geometry}
           material={materials['Leather Uph3 Red']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_4.geometry}
           material={materials['Leather Uph3 Black']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_5.geometry}
           material={materials['07 - Default222']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_6.geometry}
           material={materials['Chrome Clean22']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_7.geometry}
           material={materials['07 - Default3434']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_8.geometry}
           material={materials['07 - Default34342']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_9.geometry}
           material={materials['07 - Default34341']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_10.geometry}
           material={materials['07 - Default343412']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_11.geometry}
           material={materials['07 - D1']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_12.geometry}
           material={materials['05 - Default']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_13.geometry}
           material={materials['Carbon Fiber Gloss 5mm #47']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_14.geometry}
           material={materials['Anodized Aluminum Polished Black #1']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_15.geometry}
           material={materials['Metal Brushed 90° Red #1']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_16.geometry}
           material={materials['Rubber Rough']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_17.geometry}
           material={materials['Iron Textured #1']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_18.geometry}
           material={materials['Carbon Fiber Gloss 5mm #43']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_19.geometry}
           material={materials['04 - Default']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_20.geometry}
           material={materials['Glass Clear']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_21.geometry}
           material={materials['Chrome Clean']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_22.geometry}
           material={materials['07 - Default']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_23.geometry}
           material={materials['Carbon Fiber Gloss 5mm #46']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_24.geometry}
           material={materials['Chrome Clean2']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_25.geometry}
           material={materials['black #1']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_26.geometry}
           material={materials['Glass (Solid) White #13']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_27.geometry}
           material={materials['Chrome Polished #1']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_28.geometry}
           material={materials['Chrome Polished #2']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_29.geometry}
           material={materials['Chrome Polished #3']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_30.geometry}
           material={materials['Glass (Solid) White #10']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_31.geometry}
           material={materials['Paint Metallic Deep Cobalt Blue #1']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_32.geometry}
           material={materials['Glass (Solid) White #11']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_33.geometry}
           material={materials['Chrome Polished #5']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_34.geometry}
           material={materials['Glass (Solid) White #12']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_35.geometry}
           material={materials['Carbon Fiber Gloss 5mm #44']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_36.geometry}
           material={materials['Carbon Fiber Gloss 5mm #45']}
         />
         <mesh
+          scale={0.2}
           castShadow
           receiveShadow
           geometry={nodes.Porsche_911_GT3_37.geometry}

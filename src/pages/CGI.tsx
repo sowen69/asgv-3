@@ -5,19 +5,22 @@ import placeholder from '../assets/images/No-Image.png';
 function CgiInfo() {
   return (
     <>
-      <section id="intro" className="bg-lime-100 w-screen relative p-5">
+      <section id="intro" className=" w-screen relative p-5 text-white">
         <header className="pt-1">
-          <h1 className="text-6xl uppercase">CGI</h1>
-          <h2 className="text-2xl uppercase">Computer Generated Images</h2>
+          <h1 className="text-6xl uppercase mb-5">Computer Generated Images</h1>
+          <h2 className="text-2xl uppercase mb-2">
+            3D indiscernible from Photography
+          </h2>
+
+          <p>Powerful imagery fully generated in 3D.</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ab
-            accusamus quia quos laboriosam, commodi corporis quo qui, distinctio
-            culpa ratione ipsa ipsum nemo, asperiores mollitia maxime ducimus
-            impedit consectetur!
+            Photo-realistic graphics give our customers unparalleled levels of
+            creative control and opportunities to showcase their award winning
+            products.
           </p>
         </header>
       </section>
-      <section className="bg-lime-300 w-screen relative p-4">
+      <section className=" w-screen relative py-4 text-white">
         <section className="overflow-hidden text-gray-700">
           <div className="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
             <div className="flex flex-wrap -m-1 md:-m-2">
@@ -71,33 +74,33 @@ function CgiInfo() {
           </div>
         </section>
       </section>
-      <section className="bg-lime-200 w-screen relative p-4">
-        <h3 className="text-4xl">INDEPTH</h3>
-        <h4 className="text-xl">INDEPTH SUBTITLE</h4>
-        <p className="text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ab
-          accusamus quia quos laboriosam, commodi corporis quo qui, distinctio
-          culpa ratione ipsa ipsum nemo, asperiores mollitia maxime ducimus
-          impedit consectetur!
+      <section className=" w-screen relative p-4 text-white">
+        <h3 className="text-4xl mb-2">How’s it done?</h3>
+        <p className="text-sm sm:w-1/2 w-full">
+          Our 3D renders offer unparalleled opportunities to showcase the best
+          in product design and packaging.
         </p>
-        <p className="text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ab
-          accusamus quia quos laboriosam, commodi corporis quo qui, distinctio
-          culpa ratione ipsa ipsum nemo, asperiores mollitia maxime ducimus
-          impedit consectetur!
+        <p className="text-sm sm:w-1/2 w-full">
+          Beginning with a wire-frame model of the product, we add layers of
+          properties representing the materials found on the finished object.
         </p>
-        <h4 className="text-xl">SUBTITLE</h4>
-        <p className="text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ab
-          accusamus quia quos laboriosam, commodi corporis quo qui, distinctio
-          culpa ratione ipsa ipsum nemo, asperiores mollitia maxime ducimus
-          impedit consectetur!
+        <p className="text-sm sm:w-1/2 w-full">
+          The result is a fully editable image which is indistinguishable from
+          photography.
         </p>
-        <p className="text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ab
-          accusamus quia quos laboriosam, commodi corporis quo qui, distinctio
-          culpa ratione ipsa ipsum nemo, asperiores mollitia maxime ducimus
-          impedit consectetur!
+        <h4 className="text-xl pt-5 sm:w-1/2 w-full mb-2">
+          The Infinite Photo shoot
+        </h4>
+        <p className="text-sm sm:w-1/2 w-full">
+          Photorealistic CGI models, the options are… infinite.
+        </p>
+        <p className="text-sm sm:w-1/2 w-full">
+          Once the 3D is built the same model can then be represented in an
+          infinite number of ways: animation, macro photography, studio or
+          location based shots.
+        </p>
+        <p className="text-sm sm:w-1/2 w-full">
+          One model, many uses. That’s the Infinite Photo shoot.
         </p>
       </section>
     </>

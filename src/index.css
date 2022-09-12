@@ -20,9 +20,12 @@ html {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: 'inter var';
   font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.9 !important;
 }
 #root {
   width: 100%;
@@ -54,4 +57,8 @@ body {
   stroke: #fff;
   stroke-miterlimit: 10;
   stroke-width: 1px;
+}
+
+.canvas {
+  position: static !important;
 }

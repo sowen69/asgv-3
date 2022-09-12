@@ -90,7 +90,7 @@ function Header() {
       </div>
       <nav
         ref={navRef}
-        className="absolute z-50 w-full top-10 left-0 bg-slate-700 opacity-75 mobile-nav hidden  text-white md:hidden"
+        className="absolute z-50 w-full top-10 left-0 bg-slate-700 opacity-90 mobile-nav hidden  text-white md:hidden"
       >
         <a className="block py-2 px-5" href="#/">
           Home
