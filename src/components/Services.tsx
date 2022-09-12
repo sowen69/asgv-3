@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
 import Slider from 'react-slick';
 // Carosel images
 import coffee from '../assets/images/coffee-1-1.jpg';

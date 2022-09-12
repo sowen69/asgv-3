@@ -1,37 +1,25 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { motion, Variants } from 'framer-motion';
-import Slider from 'react-slick';
 import Hero from '../components/Hero';
 import SlideInRight from '../components/transitions/SlideInRight';
 import SlideInLeft from '../components/transitions/SlideInLeft';
 import MoreButton from '../components/MoreButton';
 import FadeIn from '../components/transitions/FadeIn';
-import coffee from '../assets/images/coffee-1-1.jpg';
-import pink from '../assets/images/pink-1-1.jpg';
-import redkin from '../assets/images/redkin-1-1.jpg';
 import Services from '../components/Services';
 
 function Home() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
+  // const paraVariants: Variants = {
+  //   initial: { x: 50, opacity: 0, pathLength: 0 },
+  //   animate: {
+  //     x: 0,
+  //     opacity: 1,
 
-  const paraVariants: Variants = {
-    initial: { x: 50, opacity: 0, pathLength: 0 },
-    animate: {
-      x: 0,
-      opacity: 1,
-
-      transition: {
-        delay: 0.5,
-      },
-    },
-  };
+  //     transition: {
+  //       delay: 0.5,
+  //     },
+  //   },
+  // };
   const svgVariants: Variants = {
     initial: { opacity: 0, pathLength: 0 },
     animate: {

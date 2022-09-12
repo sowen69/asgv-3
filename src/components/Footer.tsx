@@ -1,5 +1,3 @@
-import React from 'react';
-
 function ASGVFooter() {
   return (
     <footer className="flex justify-between footer mx-0 px-5 py-10 bg-slate-700 text-base-content text-yellow-400">

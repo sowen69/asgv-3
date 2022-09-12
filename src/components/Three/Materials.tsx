@@ -1,4 +1,3 @@
-import React from 'react';
 import { MeshMatcapMaterial, TextureLoader } from 'three';
 
 export default function Materials() {

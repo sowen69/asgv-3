@@ -7,9 +7,6 @@ import React, { Suspense, useRef } from 'react';
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 // import Drei from '@react-three/drei';
 
-// import * as THREE { Group } from 'three';
-// import { Group, Mesh } from 'three';
-// import { Clay } from './Three/Materials';
 import Dalmore from './Three/Dalmore';
 
 function Hero() {
@@ -32,16 +29,7 @@ function Hero() {
           // castShadow
         />
         <Suspense fallback={null}>
-          {/* <motion.group
-            animate={{
-              opacity: 0,
-              transition: {
-                duration: 5,
-              },
-            }}
-          > */}
           <Dalmore />
-          {/* </motion.group> */}
         </Suspense>
       </Canvas>
     </section>
