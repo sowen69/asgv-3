@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Canvas, useFrame } from '@react-three/fiber';
+import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import React, { Suspense, useRef } from 'react';
 // import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
@@ -16,22 +17,31 @@ function Hero() {
     <section className="h-screen w-full ">
       <Canvas>
         <fog attach="fog" args={['#0000ff']} />
-        <spotLight color="#fff" position={[0, 0, -50]} intensity={100} />
-        {/* <pointLight color="#ff0000" position={[-20, 10, -30]} intensity={100} /> */}
+        {/* <spotLight color="#fff" position={[0, 0, -50]} intensity={1} /> */}
+        <pointLight color="#000088" position={[-20, 10, -30]} intensity={5} />
         <directionalLight
           color="#fff"
           position={[25, 5, -5]}
-          intensity={0.15}
-          castShadow
+          intensity={2}
+          // castShadow
         />
         <directionalLight
           color="#0000ff"
           position={[-25, 5, 10]}
-          intensity={0.1}
-          castShadow
+          intensity={2}
+          // castShadow
         />
         <Suspense fallback={null}>
+          {/* <motion.group
+            animate={{
+              opacity: 0,
+              transition: {
+                duration: 5,
+              },
+            }}
+          > */}
           <Dalmore />
+          {/* </motion.group> */}
         </Suspense>
       </Canvas>
     </section>

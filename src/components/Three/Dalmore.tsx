@@ -12,20 +12,15 @@ import { Clay } from './Materials';
 
 type GLTFResult = GLTF & {
   nodes: {
-    dalmore_1: Mesh;
-    dalmore_2: Mesh;
-    dalmore_3: Mesh;
+    dalmore002: THREE.Mesh;
   };
   materials: {
-    standardSurface5SG: MeshStandardMaterial;
-    initialShadingGroup: MeshStandardMaterial;
-    ['Liquid2:initialShadingGroup']: MeshStandardMaterial;
+    ['Letherd dots']: THREE.MeshStandardMaterial;
   };
 };
-const clay = Clay();
 
 export default function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/Dalmore1.gltf') as GLTFResult;
+  const { nodes, materials } = useGLTF('/Dalmore2.glb') as GLTFResult;
   const mesh = useRef<Mesh | null>(null);
 
   useFrame(({ clock }) => {
@@ -37,35 +32,18 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
     }
   });
   return (
-    <group {...props} dispose={null}>
-      <group name="Scene" scale={[0.02, 0.02, 0.02]} position={[0, -1.5, 0]}>
-        <group name="dalmore" rotation={[Math.PI / 2, 0, 0]}>
-          {/* <mesh
-            name="dalmore_1"
-            castShadow
-            receiveShadow
-            geometry={nodes.dalmore_1.geometry}
-            material={materials.initialShadingGroup}
-          /> */}
-          <mesh
-            name="dalmore_2"
-            castShadow
-            receiveShadow
-            geometry={nodes.dalmore_2.geometry}
-            material={materials.standardSurface5SG}
-            ref={mesh}
-          />
-          {/* <mesh
-            name="dalmore_3"
-            castShadow
-            receiveShadow
-            geometry={nodes.dalmore_3.geometry}
-            material={materials.standardSurface5SG}
-          /> */}
-        </group>
-      </group>
+    <group position={[0, -1.5, 0]} {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.dalmore002.geometry}
+        material={materials['Letherd dots']}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={0.02}
+        ref={mesh}
+      />
     </group>
   );
 }
 
-useGLTF.preload('/Dalmore1.gltf');
+useGLTF.preload('/Dalmore2.glb');
