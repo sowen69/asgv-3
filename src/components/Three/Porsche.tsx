@@ -93,7 +93,7 @@ type GLTFResult = GLTF & {
 export default function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/porche.glb') as GLTFResult;
 
-  const mesh = useRef<Group | null>(null);
+  const mesh = useRef<THREE.Group | null>(null);
 
   useFrame(({ clock }) => {
     const a = clock.getElapsedTime();

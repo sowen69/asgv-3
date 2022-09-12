@@ -6,9 +6,17 @@ import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { Mesh } from 'three';
+import { GLTF } from 'three-stdlib';
 
-export default function Model(props) {
-  const { nodes, materials } = useGLTF('/asgv-3/icosphere.glb');
+type GLTFResult = GLTF & {
+  nodes: { Icosphere: THREE.Mesh };
+  materials: {
+    ['Letherd dots']: THREE.MeshStandardMaterial;
+  };
+};
+
+export default function Model(props: JSX.IntrinsicElements['group']) {
+  const { nodes, materials } = useGLTF('/asgv-3/icosphere.glb') as GLTFResult;
 
   const mesh = useRef<Mesh | null>(null);
 
