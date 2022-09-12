@@ -1,12 +1,17 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { motion, Variants } from 'framer-motion';
+import { Canvas } from '@react-three/fiber';
+import { Suspense } from 'react';
 import Hero from '../components/Hero';
 import SlideInRight from '../components/transitions/SlideInRight';
 import SlideInLeft from '../components/transitions/SlideInLeft';
 import MoreButton from '../components/MoreButton';
 import FadeIn from '../components/transitions/FadeIn';
 import Services from '../components/Services';
+import Isosphere from '../components/Three/Isosphere';
+import Cone from '../components/Three/Cone';
+import Porsche from '../components/Three/Porsche';
 
 function Home() {
   // const paraVariants: Variants = {
@@ -26,7 +31,7 @@ function Home() {
       opacity: 1,
       pathLength: 1,
       // fill: '#ffffff',
-      transition: { staggerChildren: 0.05, duration: 0.8 },
+      transition: { staggerChildren: 0.1, duration: 0.1 },
     },
   };
 
@@ -36,9 +41,9 @@ function Home() {
       <SlideInRight>
         <section
           id="cgi"
-          className="cgi h-screen w-full relative pt-20 bg-transparent"
+          className="relative cgi h-screen w-full pt-20 bg-transparent"
         >
-          <header className="cgiHead text-right">
+          <header className="absolute top-0 left-0 cgiHead text-right">
             <h2 className=" flex flex-row-reverse text-right justify-items-end">
               <svg
                 id="Layer_2"
@@ -199,11 +204,33 @@ function Home() {
               <MoreButton href="#/cgi" buttonText="READ MORE" />
             </p>
           </header>
+          <Canvas className="canvas w-full h-full static top-0 left-0 -z-10">
+            <pointLight
+              color="#000088"
+              position={[-20, 10, -30]}
+              intensity={5}
+            />
+            <directionalLight
+              color="#fff"
+              position={[25, 5, -5]}
+              intensity={2}
+              // castShadow
+            />
+            <directionalLight
+              color="#0000ff"
+              position={[-25, 5, 10]}
+              intensity={2}
+              // castShadow
+            />
+            <Suspense fallback={null}>
+              <Isosphere />
+            </Suspense>
+          </Canvas>
         </section>
       </SlideInRight>
       <SlideInLeft>
-        <section id="dap" className="h-screen w-full pt-20">
-          <header className="dapHead">
+        <section id="dap" className="relative h-screen w-full pt-20">
+          <header className="absolute top-0 left-0 dapHead">
             <h2 className="text-5xl text-left text-white">
               DIGITAL ASSET
               <br />
@@ -220,11 +247,33 @@ function Home() {
               </p>
             </FadeIn>
           </header>
+          <Canvas className="canvas w-full h-full static top-0 left-0 -z-10">
+            <pointLight
+              color="#000088"
+              position={[-20, 10, -30]}
+              intensity={5}
+            />
+            <directionalLight
+              color="#fff"
+              position={[25, 5, -5]}
+              intensity={2}
+              // castShadow
+            />
+            <directionalLight
+              color="#0000ff"
+              position={[-25, 5, 10]}
+              intensity={2}
+              // castShadow
+            />
+            <Suspense fallback={null}>
+              <Cone />
+            </Suspense>
+          </Canvas>
         </section>
       </SlideInLeft>
       <SlideInRight>
-        <section id="spins" className="h-screen w-full relative">
-          <header className="spinsHead pt-8">
+        <section id="spins" className="relative h-screen w-full">
+          <header className="absolute top-0 left-0 spinsHead pt-8">
             <h2 className="text-5xl text-right text-white">
               E-COMMERCE
               <br />
@@ -243,6 +292,28 @@ function Home() {
               </p>
             </FadeIn>
           </header>
+          <Canvas className="canvas w-full h-full static top-0 left-0 -z-10">
+            <pointLight
+              color="#000088"
+              position={[-20, 10, -30]}
+              intensity={5}
+            />
+            <directionalLight
+              color="#fff"
+              position={[25, 5, -5]}
+              intensity={2}
+              // castShadow
+            />
+            <directionalLight
+              color="#0000ff"
+              position={[-25, 5, 10]}
+              intensity={2}
+              // castShadow
+            />
+            <Suspense fallback={null}>
+              <Porsche />
+            </Suspense>
+          </Canvas>
         </section>
       </SlideInRight>
       {/* <SlideInLeft> */}
