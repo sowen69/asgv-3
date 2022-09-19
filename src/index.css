@@ -59,6 +59,9 @@ body {
   stroke-width: 1px;
 }
 
-.canvas {
-  position: static !important;
+.ani {
+  height: calc(100vh * 5);
 }
+/* .canvas {
+  position: static !important;
+} */
