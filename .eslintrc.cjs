@@ -24,5 +24,7 @@ module.exports = {
     'linebreak-style': 0,
     'prettier/prettier': 0,
     'import/no-named-as-default': 0,
+    'no-underscore-dangle': 0,
+    '@typescript-eslint/lines-between-class-members': 0,
   },
 };
