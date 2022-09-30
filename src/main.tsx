@@ -10,11 +10,11 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'tw-elements';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <HashRouter>
-      <Header />
-      <Routing />
-      <Footer />
-    </HashRouter>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <HashRouter>
+    <Header />
+    <Routing />
+    <Footer />
+  </HashRouter>
+  // </React.StrictMode>
 );

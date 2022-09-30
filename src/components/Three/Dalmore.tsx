@@ -25,10 +25,10 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
   useFrame(({ clock }) => {
     const a = clock.getElapsedTime();
 
-    if (mesh.current) {
-      mesh.current.rotation.z = a;
-      // mesh.current.rotation.y = a / 2;
-    }
+    // if (mesh.current) {
+    //   mesh.current.rotation.z = a;
+    //   // mesh.current.rotation.y = a / 2;
+    // }
   });
   return (
     <group position={[0, -1.5, 0]} {...props} dispose={null}>

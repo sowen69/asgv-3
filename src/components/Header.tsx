@@ -4,6 +4,7 @@ import { useRef } from 'react';
 function Header() {
   const navRef = useRef<HTMLElement>(null);
 
+  // TODO: Dismiss menu with Esc and onBlur click
   const toggle = () => {
     navRef.current?.classList.toggle('hidden');
   };
