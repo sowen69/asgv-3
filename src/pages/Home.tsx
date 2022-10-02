@@ -3,7 +3,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import AnimatedHeader from '../components/AnimatedHeader';
 import Hero from '../components/Hero';
 import MoreButton from '../components/MoreButton';
-import FadeIn from '../components/transitions/FadeIn';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,9 +17,7 @@ function Home() {
         <header className="text-right">
           <AnimatedHeader
             sectionName="one"
-            line1="CGI AND"
-            line2="PRODUCT"
-            line3="VISULISATION"
+            headers={['CGI AND', 'PRODUCT', 'VISULISATION']}
             animationStyle="Bounce"
           />
         </header>
@@ -37,7 +34,7 @@ function Home() {
         </article>
       </section>
 
-      <section className="relative h-screen w-full pt-20 px-10 bg-transparent">
+      {/* <section className="relative h-screen w-full pt-20 px-10 bg-transparent">
         <header className="text-left">
           <AnimatedHeader
             sectionName="two"
@@ -103,7 +100,7 @@ function Home() {
             <MoreButton href="#/spins" buttonText="READ MORE" />
           </p>
         </article>
-      </section>
+      </section> */}
     </div>
   );
 }

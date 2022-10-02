@@ -15,7 +15,7 @@ import { Color, MeshLambertMaterial } from 'three';
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 // import Drei from '@react-three/drei';
 
-import Dalmore from './Three/Dalmore';
+import Dalmore from './Three/Dalmore2';
 
 function Hero() {
   return (
@@ -46,7 +46,7 @@ function Hero() {
           intensity={2}
           castShadow
         />
-        <OrbitControls />
+        {/* <OrbitControls /> */}
 
         <Suspense fallback={null}>
           <mesh
@@ -66,10 +66,10 @@ function Hero() {
               reflectorOffset={-0.4}
             />
           </mesh>
-          <mesh castShadow receiveShadow position={[4, 0, 0]}>
+          {/* <mesh castShadow receiveShadow position={[4, 0, 0]}>
             <boxBufferGeometry attach="geometry" args={[3, 3, 3]} />
             <meshLambertMaterial attach="material" color="#0000ff" />
-          </mesh>
+          </mesh> */}
           {/* <ContactShadows
             opacity={1}
             scale={10}

@@ -12,7 +12,9 @@ import AboutInfo from './pages/About';
 function Routing() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/">
+        <Home />
+      </Route>
       <Route path="/cgi" element={<CgiInfo />} />
       <Route path="/dap" element={<DapInfo />} />
       <Route path="/spins" element={<SpinsInfo />} />
