@@ -3,23 +3,24 @@ function ASGVFooter() {
     <footer
       className="
       flex 
-      flex-row 
       flex-wrap
       justify-between 
       footer 
       mx-0 
-      px-5 
+      px-10 
       py-10 
       bg-slate-700 
       text-base-content 
       text-white
-      sm:flex-col"
+      sm:flex-row
+      flex-col
+      z-20"
     >
       {/* logo column */}
-      <div className="pb-5 sm:w-1/4">
+      <div className="pb-5 pr-5 sm:w-1/4">
         <img
           className="block items-center fill-white pb-3"
-          src="/asgv-3/ASGV_Logo_Rev.png"
+          src="/ASGV_Logo_Rev.png"
           alt="Logo"
         />
         <p className="text-xs">
@@ -28,8 +29,8 @@ function ASGVFooter() {
         </p>
       </div>
       {/* menu column */}
-      <div className="flex flex-col sm:w-3/4">
-        <div className="">
+      <div className="flex flex-row sm:w-3/4 justify-between sm:pl-20">
+        <div className="flex flex-col flex-wrap">
           <h3 className="footer-title">Services</h3>
           <a href="/#" className="text-xs link link-hover pr-2">
             CGI
@@ -50,7 +51,7 @@ function ASGVFooter() {
             Creative Design
           </a>
         </div>
-        <div className="">
+        <div className="flex flex-col flex-wrap">
           <h3 className="footer-title">Company</h3>
           <a href="/#" className="text-xs link link-hover pr-2">
             About us
@@ -65,7 +66,7 @@ function ASGVFooter() {
             Press kit
           </a>
         </div>
-        <div className="">
+        <div className="flex flex-col flex-wrap">
           <h3 className="footer-title">Legal</h3>
           <a href="/#" className="text-xs link link-hover pr-2">
             Terms of use

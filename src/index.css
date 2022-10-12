@@ -1,4 +1,5 @@
 @import './assets/fonts/inter.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +11,7 @@ html {
   font-family: 'Inter', sans-serif;
   width: 100vw;
   overflow-x: hidden;
-  background-color: #dddddd;
+  /* background-color: #dddddd; */
 }
 @supports (font-variation-settings: normal) {
   html {
@@ -29,19 +30,7 @@ h4 {
 }
 #root {
   width: 100%;
-}
-body {
-  /* background-image: linear-gradient(
-    45deg,
-    hsl(297deg 64% 28%) 0%,
-    hsl(271deg 52% 32%) 9%,
-    hsl(242deg 47% 32%) 17%,
-    hsl(244deg 38% 20%) 26%,
-    hsl(246deg 10% 11%) 36%,
-    hsl(224deg 39% 11%) 47%,
-    hsl(222deg 47% 8%) 63%,
-    hsl(0deg 0% 0%) 100%
-  ); */
+  background-color: #000;
 }
 .home {
   width: 100%;
@@ -52,7 +41,7 @@ body {
   color: #0f0 !important;
   outline: solid #f00 1px !important;
 }*/
-
+/*
 .cls-1 {
   stroke: #fff;
   stroke-miterlimit: 10;
@@ -62,6 +51,62 @@ body {
 .ani {
   height: calc(100vh * 5);
 }
-/* .canvas {
+ .canvas {
   position: static !important;
 } */
+/* body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+} */
+.background-container {
+  position: relative;
+  display: flex;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+}
+.video-container {
+  flex: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+#bgVideo {
+  flex: 1;
+  background-color: #000;
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  height: 100vh;
+}
+.scroll-container {
+  overflow: hidden;
+}
+.step {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative; */
+  height: 100vh;
+  width: 100%;
+}
+.step > article {
+  /*   display: flex;
+  align-content: center; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  font-weight: 700;
+  font-size: 40px;
+  text-shadow: 2px 2px #000; */
+  /*height: 100vh;*/
+  width: 100%;
+  color: #fff;
+  opacity: 1;
+}

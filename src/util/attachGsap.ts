@@ -17,7 +17,6 @@ export default function attachGsap(
   const timeline = gsap.timeline({
     scrollTrigger: {
       id: `#${sectionName}`,
-      // markers: true,
       trigger: `#${sectionName}`,
       // pin: true, // pin the trigger element while active
       start: 'top 80%', // when the top of the trigger hits the top of the viewport
@@ -35,7 +34,7 @@ export default function attachGsap(
     timeline.fromTo(
       `.char${i}`,
       { paddingTop: '2.75rem', opacity: 0 },
-      { paddingTop: 0, opacity: 1, duration: 0.1, ease: 'power2.back' }
+      { paddingTop: 0, opacity: 1, duration: 0.05, ease: 'power2.back' }
     );
     // .delay(0.5)
     // .shiftChildren(0.05 * i);

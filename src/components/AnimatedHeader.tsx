@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/heading-has-content */
-/* eslint-disable jsx-a11y/heading-has-content */
+
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import spanify from '../util/spanify';
 import attachGsap from '../util/attachGsap';

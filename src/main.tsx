@@ -15,13 +15,17 @@ import './index.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'tw-elements';
+import HeroVideo from './components/HeroVideo';
+import Hero from './components/Hero';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   // <React.StrictMode>
   <Router>
     <Header />
+    <Hero />
+    <HeroVideo />
     <Routes>
-      <Route path="/asgv-3/" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/about" element={<AboutInfo />} />
     </Routes>
     <Footer />
