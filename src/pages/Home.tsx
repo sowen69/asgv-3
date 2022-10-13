@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import AnimatedHeader from '../components/AnimatedHeader';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
+import HeroVideo from '../components/HeroVideo';
 // import Hero from '../components/Hero';
 import MoreButton from '../components/MoreButton';
 import Services from '../components/Services';
@@ -13,6 +14,8 @@ gsap.registerPlugin(ScrollTrigger);
 function Home() {
   return (
     <div className="home">
+      <Hero />
+      <HeroVideo />
       <section className="step relative h-screen w-full pt-20 bg-transparent px-10 ">
         <header className="text-right">
           <AnimatedHeader

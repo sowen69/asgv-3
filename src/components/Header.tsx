@@ -26,43 +26,43 @@ function Header() {
           <nav className="hidden md:flex items-center text-yellow-600">
             <a
               className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
-              href="#/"
+              href="/"
             >
               Home
             </a>
             <a
               className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
-              href="#/cgi"
+              href="/cgi"
             >
               CGI
             </a>
             <a
               className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
-              href="#/dap"
+              href="/dap"
             >
               DAP
             </a>
             <a
               className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
-              href="#/spins"
+              href="/spins"
             >
               Spins
             </a>
             <a
               className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
-              href="#/photography"
+              href="/photography"
             >
               Photography
             </a>
             <a
               className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
-              href="#/design"
+              href="/design"
             >
               Design
             </a>
             <a
               className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
-              href="#/about"
+              href="/about"
             >
               About
             </a>
@@ -93,25 +93,25 @@ function Header() {
         ref={navRef}
         className="absolute z-50 w-full top-10 left-0 bg-slate-700 opacity-90 mobile-nav hidden  text-white md:hidden"
       >
-        <a className="block py-2 px-5" href="#/">
+        <a className="block py-2 px-5" href="/">
           Home
         </a>
-        <a className="block py-2 px-5" href="#/cgi">
+        <a className="block py-2 px-5" href="/cgi">
           Computer Generated Images
         </a>
-        <a className="block py-2 px-5" href="#/dap">
+        <a className="block py-2 px-5" href="/dap">
           Digital Asset Pipeline
         </a>
-        <a className="block py-2 px-5" href="#/spins">
+        <a className="block py-2 px-5" href="/spins">
           Product Spins
         </a>
-        <a className="block py-2 px-5" href="#/photography">
+        <a className="block py-2 px-5" href="/photography">
           Photography and Retouch
         </a>
-        <a className="block py-2 px-5" href="#/design">
+        <a className="block py-2 px-5" href="/design">
           Design, Packaging and Web
         </a>
-        <a className="block py-2 px-5" href="#/about">
+        <a className="block py-2 px-5" href="/about">
           About
         </a>
       </nav>

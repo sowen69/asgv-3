@@ -15,24 +15,16 @@ function AnimatedHeader({
   headers,
   animationStyle,
 }: AnimatedHeaderProps) {
-  const headlines = useRef<HTMLDivElement | null>();
-  // let headlines: HTMLDivElement = (<div></div>) as HTMLDivElement;
+  const headlines = useRef<HTMLDivElement | null>(null);
   const numberOfLines = headers.length;
   const headline = spanify(headers, sectionName);
 
   useEffect(() => {
-    headlines.current.innerHTML = headline;
+    if (headlines.current) headlines.current.innerHTML = headline;
     for (let i = 1; i <= numberOfLines; i += 1) {
       attachGsap(sectionName, animationStyle, i);
     }
   });
-
-  // onMount(() => {
-  // 	headlines.innerHTML = headline;
-  // 	for (let i = 1; i <= numberOfLines; i++) {
-  // 		attachGsap(sectionName, animationStyle, i);
-  // 	}
-  // });
   return <div id={`${sectionName}`} ref={headlines} />;
 }
 export default AnimatedHeader;

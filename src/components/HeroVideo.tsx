@@ -1,7 +1,8 @@
+/* eslint-disable prefer-rest-params */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
-import React, { Suspense, useEffect, useRef } from 'react';
+import React, { DOMElement, Suspense, useEffect, useRef } from 'react';
 import vid from '.././assets/bg.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -11,13 +12,13 @@ export default function HeroVideo() {
 
   useEffect(() => {
     console.clear;
-    const sections = gsap.utils.toArray('.step');
+    const sections: HTMLElement[] = gsap.utils.toArray('.step');
     const numberOfSections = sections.length;
     const SectionLen = 400;
     const videoEnd = '+=' + (SectionLen * (numberOfSections * 2.5)).toString();
-    console.log(numberOfSections);
-    console.log(sections);
-    console.log(videoEnd);
+    // console.log(numberOfSections);
+    // console.log(sections);
+    // console.log(videoEnd);
 
     bgVideo.current?.load();
     bgVideo.current?.pause();
@@ -31,7 +32,7 @@ export default function HeroVideo() {
         pin: true,
         anticipatePin: 1,
       });
-      gsap.utils.toArray('#bgVideo').forEach((video) =>
+      gsap.utils.toArray('#bgVideo').forEach((video: any) =>
         videoScrub(video, {
           scrollTrigger: {
             trigger: video,
@@ -45,10 +46,13 @@ export default function HeroVideo() {
       );
     });
   }, []);
-  function videoScrub(video, vars) {
-    video = gsap.utils.toArray(video)[0]; // in case selector text is fed in.
-    const once = (el, event, fn) => {
-        const onceFn = function () {
+
+  function videoScrub(videos: HTMLElement[], vars: gsap.TweenVars) {
+    const video: HTMLVideoElement = gsap.utils.toArray(
+      videos
+    )[0] as HTMLVideoElement; // in case selector text is fed in.
+    const once = (el: HTMLElement, event: any, fn: any) => {
+        const onceFn = function (this: any) {
           el.removeEventListener(event, onceFn);
           fn.apply(this, arguments);
         };

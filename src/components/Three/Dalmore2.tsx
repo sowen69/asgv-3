@@ -8,7 +8,7 @@ import { useFrame, useLoader } from '@react-three/fiber';
 import { AnimationMixer, Mesh } from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
-export default function Model(props) {
+export default function Model() {
   // const { nodes, materials } = useGLTF('/asgv-3/Dalmore2.glb');
   const model = useLoader(GLTFLoader, '/asgv-3/dalmore2.glb');
   // const mesh = useRef<Mesh | null>(null);
