@@ -1,11 +1,39 @@
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
 function SpinsInfo() {
+  const width = window.innerWidth;
+  // console.log(width);
+  let pP = 2;
+  if (width > 1024) {
+    pP = 3;
+  }
+  if (width <= 767) {
+    pP = 1;
+  }
+  const options = {
+    type: 'loop',
+    gap: '1rem',
+    autoplay: false,
+    pauseOnHover: false,
+    resetProgress: false,
+    perPage: pP,
+    height: 'auto',
+  };
+  const sliderImages = [
+    '/spins/ASG_Virtua_JURA.mp4',
+    '/spins/ASG_Virtua_HAMILTON_360.mp4',
+    '/spins/ASG_Virtua_MF.mp4',
+    '/spins/ASG_Virtua_SPACEMAN 360.mp4',
+    '/spins/ASG_Virtua_LindLime_360.mp4',
+    '/spins/ASG_Virtua_TUDOR 360.mp4',
+  ];
   return (
     <>
       <section id="intro" className="w-screen relative p-10 text-white">
         <header className="pt-1">
           <h1 className="text-6xl pb-2">Product Spins</h1>
           <h2 className="text-2xl pb-2">Bringing your products to life</h2>
-          <p>
+          <p className="sm:w-1/2 w-full">
             As an alternative to our full 3D Renders, we also offer 3D object
             photography. This produces interactive images that can be spun and
             rotated to best showcase their properties. This is the perfect
@@ -15,13 +43,34 @@ function SpinsInfo() {
         </header>
       </section>
       <section className="w-screen h-auto p-10 static">
-        <iframe
+        <Splide className="text-center mx-auto" tag="section" options={options}>
+          <SplideSlide>
+            <video src={sliderImages[0]} muted autoPlay loop></video>
+          </SplideSlide>
+          <SplideSlide>
+            <video src={sliderImages[1]} muted autoPlay loop></video>
+          </SplideSlide>
+          <SplideSlide>
+            <video src={sliderImages[2]} muted autoPlay loop></video>
+          </SplideSlide>
+          <SplideSlide>
+            <video src={sliderImages[3]} muted autoPlay loop></video>
+          </SplideSlide>
+          <SplideSlide>
+            <video src={sliderImages[4]} muted autoPlay loop></video>
+          </SplideSlide>
+          <SplideSlide>
+            <video src={sliderImages[5]} muted autoPlay loop></video>
+          </SplideSlide>
+        </Splide>
+
+        {/* <iframe
           className="w-full h-full"
           src="https://asgvirtua.com/Spins/Product/Drill/index.html"
           frameBorder="0"
           scrolling="no"
           height={400}
-        ></iframe>
+        ></iframe> */}
       </section>
       {/* <section className="w-screen relative p-10">
         <h3 className="text-4xl">INDEPTH</h3>

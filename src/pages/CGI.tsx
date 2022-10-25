@@ -1,4 +1,41 @@
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import picture from '../util/picture';
+import { useEffect, useRef } from 'react';
+
 function CgiInfo() {
+  const width = window.innerWidth;
+  // console.log(width);
+
+  let pP = 2;
+  if (width > 1024) {
+    pP = 3;
+  }
+  if (width <= 767) {
+    pP = 1;
+  }
+  const options = {
+    type: 'loop',
+    gap: '1rem',
+    autoplay: false,
+    pauseOnHover: false,
+    resetProgress: false,
+    perPage: pP,
+    height: 'auto',
+  };
+  //const slider = useRef();
+  const sliderImages = [
+    '/cgi/cgi01',
+    '/cgi/cgi02',
+    '/cgi/cgi03',
+    '/cgi/cgi04',
+    '/cgi/cgi05',
+    '/cgi/cgi06',
+  ];
+
+  useEffect(() => {
+    //console.log(picElements);
+  });
+
   return (
     <>
       <section id="intro" className=" w-screen relative p-10 text-white">
@@ -18,7 +55,106 @@ function CgiInfo() {
           </p>
         </header>
       </section>
-      <section className=" w-screen relative py-4 text-white"></section>
+      <section className="w-full relative py-4 text-white">
+        <Splide className="text-center mx-auto" tag="section" options={options}>
+          <SplideSlide>
+            <div>
+              <img
+                src={`${sliderImages[0] + '.jpg'}`}
+                srcSet={`
+                  ${sliderImages[0]}_1-1_300.jpg 300w,
+                  ${sliderImages[0]}_1-1_768.jpg 768w, 
+                  ${sliderImages[0]}_1-1_1024.jpg 1024w`}
+                sizes="
+                  (min-width: 300px) 300w,
+                  (min-width: 768px) 768w,
+                  (min-width: 1024px) 1024w"
+                alt="picture"
+              />
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div>
+              <img
+                src={`${sliderImages[1] + '.jpg'}`}
+                srcSet={`
+                  ${sliderImages[1]}_1-1_300.jpg 300w,
+                  ${sliderImages[1]}_1-1_768.jpg 768w, 
+                  ${sliderImages[1]}_1-1_1024.jpg 1024w`}
+                sizes="
+                  (min-width: 300px) 300w,
+                  (min-width: 768px) 768w,
+                  (min-width: 1024px) 1024w"
+                alt="picture"
+              />
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div>
+              <img
+                src={`${sliderImages[2] + '.jpg'}`}
+                srcSet={`
+                  ${sliderImages[2]}_1-1_300.jpg 300w,
+                  ${sliderImages[2]}_1-1_768.jpg 768w, 
+                  ${sliderImages[2]}_1-1_1024.jpg 1024w`}
+                sizes="
+                  (min-width: 300px) 300w,
+                  (min-width: 768px) 768w,
+                  (min-width: 1024px) 1024w"
+                alt="picture"
+              />
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div>
+              <img
+                src={`${sliderImages[3] + '.jpg'}`}
+                srcSet={`
+                  ${sliderImages[3]}_1-1_300.jpg 300w,
+                  ${sliderImages[3]}_1-1_768.jpg 768w, 
+                  ${sliderImages[3]}_1-1_1024.jpg 1024w`}
+                sizes="
+                  (min-width: 300px) 300w,
+                  (min-width: 768px) 768w,
+                  (min-width: 1024px) 1024w"
+                alt="picture"
+              />
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div>
+              <img
+                src={`${sliderImages[4] + '.jpg'}`}
+                srcSet={`
+                  ${sliderImages[4]}_1-1_300.jpg 300w,
+                  ${sliderImages[4]}_1-1_768.jpg 768w, 
+                  ${sliderImages[4]}_1-1_1024.jpg 1024w`}
+                sizes="
+                  (min-width: 300px) 300w,
+                  (min-width: 768px) 768w,
+                  (min-width: 1024px) 1024w"
+                alt="picture"
+              />
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div>
+              <img
+                src={`${sliderImages[5] + '.jpg'}`}
+                srcSet={`
+                  ${sliderImages[5]}_1-1_300.jpg 300w,
+                  ${sliderImages[5]}_1-1_768.jpg 768w, 
+                  ${sliderImages[5]}_1-1_1024.jpg 1024w`}
+                sizes="
+                  (min-width: 300px) 300w,
+                  (min-width: 768px) 768w,
+                  (min-width: 1024px) 1024w"
+                alt="picture"
+              />
+            </div>
+          </SplideSlide>
+        </Splide>
+      </section>
       <section className=" w-screen relative p-10 text-white">
         <h3 className="text-4xl mb-2">How’s it done?</h3>
         <p className="text-sm sm:w-1/2 w-full pb-2">

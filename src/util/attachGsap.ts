@@ -21,8 +21,7 @@ export default function attachGsap(
       // pin: true, // pin the trigger element while active
       start: 'top 80%', // when the top of the trigger hits the top of the viewport
       end: 'bottom middle', // end after scrolling 500px beyond the start
-
-      // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   });
 
@@ -32,14 +31,14 @@ export default function attachGsap(
   const spans = headings[0].childNodes;
   for (let i = 0; i <= spans.length; i += 1) {
     timeline.fromTo(
-      `.char${i}`,
-      { paddingTop: '2.75rem', opacity: 0 },
-      { paddingTop: 0, opacity: 1, duration: 0.05, ease: 'power2.back' }
+      `${sectionName}line${i}`,
+      { right: '100%', opacity: 0 },
+      { right: 0, opacity: 1, duration: 0.05, ease: 'power2.back' }
     );
     // .delay(0.5)
     // .shiftChildren(0.05 * i);
   }
-  // console.log(timeline.getChildren());
+  console.log(timeline.getChildren());
   return timeline;
 
   // TODO: Different animation styles

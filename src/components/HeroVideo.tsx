@@ -15,7 +15,7 @@ export default function HeroVideo() {
     const sections: HTMLElement[] = gsap.utils.toArray('.step');
     const numberOfSections = sections.length;
     const SectionLen = 400;
-    const videoEnd = '+=' + (SectionLen * (numberOfSections * 2.5)).toString();
+    const videoEnd = '+=' + (SectionLen * (numberOfSections * 3)).toString();
     // console.log(numberOfSections);
     // console.log(sections);
     // console.log(videoEnd);
@@ -83,11 +83,11 @@ export default function HeroVideo() {
     return tween;
   }
   return (
-    <section className="">
+    <section className="h-full">
       <div id="background-container" className="background-container">
         <div id="video-container" className="video-container">
           <Suspense>
-            <video ref={bgVideo} src="/bg.mp4" id="bgVideo" />
+            <video ref={bgVideo} src="/dal_out.mp4" id="bgVideo" />
           </Suspense>
         </div>
       </div>

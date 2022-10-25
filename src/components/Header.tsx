@@ -60,12 +60,12 @@ function Header() {
             >
               Design
             </a>
-            <a
+            {/* <a
               className="py-3 px-3 transition duration-350 hover:text-white active:text-yellow-900 hover:bg-yellow-600"
               href="/about"
             >
               About
-            </a>
+            </a> */}
           </nav>
         </div>
         <div className="hidden md:flex items-center space-x-4">&nbsp;</div>
@@ -111,9 +111,9 @@ function Header() {
         <a className="block py-2 px-5" href="/design">
           Design, Packaging and Web
         </a>
-        <a className="block py-2 px-5" href="/about">
+        {/* <a className="block py-2 px-5" href="/about">
           About
-        </a>
+        </a> */}
       </nav>
     </header>
   );

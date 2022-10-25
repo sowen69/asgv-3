@@ -52,7 +52,7 @@ function ASGVFooter() {
           </a>
         </div>
         <div className="flex flex-col flex-wrap">
-          <h3 className="footer-title">Company</h3>
+          {/* <h3 className="footer-title">Company</h3>
           <a href="/about" className="text-xs link link-hover pr-2">
             About us
           </a>
@@ -64,7 +64,7 @@ function ASGVFooter() {
           </a>
           <a href="/press" className="text-xs link link-hover pr-2">
             Press kit
-          </a>
+          </a> */}
         </div>
         <div className="flex flex-col flex-wrap">
           <h3 className="footer-title">Legal</h3>
