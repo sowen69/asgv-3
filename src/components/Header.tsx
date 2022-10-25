@@ -1,6 +1,6 @@
 /* eslint-disable react/button-has-type */
 import { useRef } from 'react';
-
+import logo from '../assets/ASGV_Logo_Rev.png';
 function Header() {
   const navRef = useRef<HTMLElement>(null);
 
@@ -16,11 +16,7 @@ function Header() {
         <div className="flex">
           <div className="items-center py-3 w-32 mr-3">
             <a href="/#">
-              <img
-                className="fill-white pt-0.5"
-                src="/ASGV_Logo_Rev.png"
-                alt="Logo"
-              />
+              <img className="fill-white pt-0.5" src={logo} alt="Logo" />
             </a>
           </div>
           <nav className="hidden md:flex items-center text-yellow-600">
