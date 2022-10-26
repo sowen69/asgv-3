@@ -1,14 +1,11 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { useEffect, useRef } from 'react';
 // import SlideInHeader from '../components/SlideInHeader';
-import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import HeroVideo from '../components/HeroVideo';
 // import Hero from '../components/Hero';
 import MoreButton from '../components/MoreButton';
 import Services from '../components/Services';
-import SlideInHeader from '../components/SlideInHeader';
 
 gsap.registerPlugin(ScrollTrigger);
 

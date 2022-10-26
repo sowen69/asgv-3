@@ -1,5 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import spanify from '../util/spanify';
+import { useEffect, useRef } from 'react';
 import attachGsap from '../util/attachGsap';
 import assembleHeader from '../util/assembleHeader';
 

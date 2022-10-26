@@ -1,6 +1,5 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import picture from '../util/picture';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 function CgiInfo() {
   const width = window.innerWidth;

@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import Slider from 'react-slick';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 // Carosel images
@@ -11,9 +10,7 @@ import design from '../assets/images/Jon-DSC_6264-v4-RET-1440x1440.jpg';
 
 import retouch from '../assets/images/pink-1-1.jpg';
 import packaging from '../assets/images/redkin-1-1.jpg';
-import placeholder from '../assets/images/No-Image.png';
 import MoreButton from './MoreButton';
-import coffee from '../assets/images/coffee-1-1.jpg';
 
 function Services() {
   const width = window.innerWidth;

@@ -2,9 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
-import React, { DOMElement, Suspense, useEffect, useRef } from 'react';
-import vid from '.././assets/bg.mp4';
-
+import { Suspense, useEffect, useRef } from 'react';
+import dalmore from '../assets/dal_out.mp4';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroVideo() {
@@ -87,7 +86,7 @@ export default function HeroVideo() {
       <div id="background-container" className="background-container">
         <div id="video-container" className="video-container">
           <Suspense>
-            <video ref={bgVideo} src="/dal_out.mp4" id="bgVideo" />
+            <video ref={bgVideo} src={dalmore} id="bgVideo" />
           </Suspense>
         </div>
       </div>
