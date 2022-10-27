@@ -21,12 +21,12 @@ function PhotographyInfo() {
   };
   //const slider = useRef();
   const sliderImages = [
-    '/cgi/cgi01',
-    '/cgi/cgi02',
-    '/cgi/cgi03',
-    '/cgi/cgi04',
-    '/cgi/cgi05',
-    '/cgi/cgi06',
+    '/assets/cgi/cgi01',
+    '/assets/cgi/cgi02',
+    '/assets/cgi/cgi03',
+    '/assets/cgi/cgi04',
+    '/assets/cgi/cgi05',
+    '/assets/cgi/cgi06',
   ];
 
   return (
