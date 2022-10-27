@@ -20,12 +20,12 @@ function SpinsInfo() {
     height: 'auto',
   };
   const sliderImages = [
-    '/spins/ASG_Virtua_JURA.mp4',
-    '/spins/ASG_Virtua_HAMILTON_360.mp4',
-    '/spins/ASG_Virtua_MF.mp4',
-    '/spins/ASG_Virtua_SPACEMAN 360.mp4',
-    '/spins/ASG_Virtua_LindLime_360.mp4',
-    '/spins/ASG_Virtua_TUDOR 360.mp4',
+    '/assets/spins/ASG_Virtua_JURA.mp4',
+    '/assets/spins/ASG_Virtua_HAMILTON_360.mp4',
+    '/assets/spins/ASG_Virtua_MF.mp4',
+    '/assets/spins/ASG_Virtua_SPACEMAN 360.mp4',
+    '/assets/spins/ASG_Virtua_LindLime_360.mp4',
+    '/assets/spins/ASG_Virtua_TUDOR 360.mp4',
   ];
   return (
     <>

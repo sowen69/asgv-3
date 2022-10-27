@@ -20,12 +20,12 @@ function DesignInfo() {
     height: 'auto',
   };
   const sliderImages = [
-    '/design/design01',
-    '/design/design02',
-    '/design/design03',
-    '/design/design04',
-    '/design/design05',
-    '/design/design06',
+    '/assets/creative/creative01',
+    '/assets/creative/creative02',
+    '/assets/creative/creative03',
+    '/assets/creative/creative04',
+    '/assets/creative/creative05',
+    '/assets/creative/creative06',
   ];
   return (
     <>
