@@ -1,8 +1,10 @@
+import { useWindowSize } from '../util/useWindowSize';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { useEffect } from 'react';
 
 function CgiInfo() {
-  const width = window.innerWidth;
+  const { width, height } = useWindowSize();
+
   // console.log(width);
 
   let pP = 2;

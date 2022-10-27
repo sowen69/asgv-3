@@ -1,7 +1,10 @@
+import { useWindowSize } from '../util/useWindowSize';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { useEffect, useState } from 'react';
 
 function SpinsInfo() {
-  const width = window.innerWidth;
+  const { width, height } = useWindowSize();
+
   // console.log(width);
   let pP = 2;
   if (width > 1024) {

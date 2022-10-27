@@ -1,8 +1,12 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-
+import {
+  useWindowHeight,
+  useWindowWidth,
+  useWindowSize,
+} from '@react-hook/window-size';
 function DesignInfo() {
-  const width = window.innerWidth;
-  // console.log(width);
+  const [width, height] = useWindowSize();
+  console.log(width, ' ', height);
   let pP = 2;
   if (width > 1024) {
     pP = 3;

@@ -1,7 +1,9 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { useWindowSize } from '../util/useWindowSize';
 
 function DapInfo() {
-  const width = window.innerWidth;
+  const { width, height } = useWindowSize();
+
   // console.log(width);
   let pP = 2;
   if (width > 1024) {

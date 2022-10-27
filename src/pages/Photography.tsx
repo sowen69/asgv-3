@@ -1,7 +1,9 @@
+import { useWindowSize } from '../util/useWindowSize';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 function PhotographyInfo() {
-  const width = window.innerWidth;
+  const { width, height } = useWindowSize();
+
   // console.log(width);
   let pP = 2;
   if (width > 1024) {
