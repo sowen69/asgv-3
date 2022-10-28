@@ -1,6 +1,10 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
+/**
+ * NOT USED: 20/10/22 But might be usefull
+ */
+
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.defaults({
   toggleActions: 'play reset reset none',
@@ -18,10 +22,9 @@ export default function attachGsap(
     scrollTrigger: {
       id: `#${sectionName}`,
       trigger: `#${sectionName}`,
-      // pin: true, // pin the trigger element while active
-      start: 'top 80%', // when the top of the trigger hits the top of the viewport
-      end: 'bottom middle', // end after scrolling 500px beyond the start
-      scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      start: 'top 80%',
+      end: 'bottom middle',
+      scrub: 1,
     },
   });
 

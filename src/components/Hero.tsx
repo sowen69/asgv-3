@@ -2,6 +2,7 @@
 import gsap from 'gsap';
 import video from '../assets/GIF-1_1.mp4';
 
+// NOTE: If you want to update the video contact George (george@asgvirtua.com)
 export default function Hero() {
   gsap.from('#intro', { opacity: 0, scale: 0, duration: 3 });
   return (
@@ -15,7 +16,7 @@ export default function Hero() {
         loop
       />
       <h1 className="text-5xl text-center text-white">
-        Let ASG Virtua show you what’s possible.
+        Let ASG Virtua show you what is possible.
       </h1>
     </section>
   );

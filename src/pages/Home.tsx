@@ -1,9 +1,9 @@
-// import SlideInHeader from '../components/SlideInHeader';
 import Hero from '../components/Hero';
 import HeroVideo from '../components/HeroVideo';
-// import Hero from '../components/Hero';
 import MoreButton from '../components/MoreButton';
+// Includes the carosel
 import Services from '../components/Services';
+// Slide in animations
 import SlideInLeft from '../components/transitions/SlideInLeft';
 import SlideInRight from '../components/transitions/SlideInRight';
 

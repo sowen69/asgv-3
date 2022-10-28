@@ -1,6 +1,8 @@
 /* eslint-disable no-param-reassign */
+
 // Take a String array, return an HTML node tree
-// n H2's filled with the spanified chars from the array
+// of (n)H2 tags filled with the spanified (n)chars from the array
+// NOT USED: 20/10/22 this isn't used in the current site but could be usefull
 
 export default function spanify(copy: string[], sectionName: string): string {
   let headers = '';

@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ *
+ * Reract hook to check the browser window size
+ */
+
 export const useWindowSize = () => {
   const [windowSize, setWindowSize] = React.useState({
     width: 0,
@@ -21,5 +26,3 @@ export const useWindowSize = () => {
 
   return windowSize;
 };
-
-// default useWindowSize();

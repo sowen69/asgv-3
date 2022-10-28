@@ -10,6 +10,9 @@ export default function assembleHeader(
   copy.forEach((line, i) => {
     headers += `<h2 class='${sectionName}line${i + 1} text-white text-5xl '>`;
     headers += line;
+
+    // NOTE: The following was to add spans to each charachter which I'm not using
+
     // const chars = line.split('');
     // chars.forEach((c, j) => {
     //   if (c === ' ') {

@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+Css is horrid but better looking than Tailwind
+*/
+
 html {
   margin-left: auto;
   margin-right: auto;
@@ -11,7 +15,6 @@ html {
   font-family: 'Inter', sans-serif;
   width: 100vw;
   overflow-x: hidden;
-  /* background-color: #dddddd; */
 }
 @supports (font-variation-settings: normal) {
   html {
@@ -36,29 +39,6 @@ h4 {
   width: 100%;
 }
 
-/* * {
-  background: #000 !important;
-  color: #0f0 !important;
-  outline: solid #f00 1px !important;
-}*/
-/*
-.cls-1 {
-  stroke: #fff;
-  stroke-miterlimit: 10;
-  stroke-width: 1px;
-}
-
-.ani {
-  height: calc(100vh * 5);
-}
- .canvas {
-  position: static !important;
-} */
-/* body {
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-} */
 .background-container {
   position: relative;
   display: flex;
@@ -89,23 +69,10 @@ h4 {
   overflow: hidden;
 }
 .step {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: relative; */
   height: 100vh;
   width: 100%;
 }
 .step > article {
-  /*   display: flex;
-  align-content: center; 
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-  font-weight: 700;
-  font-size: 40px;
-  text-shadow: 2px 2px #000; */
-  /*height: 100vh;*/
   width: 100%;
   color: #ffffff;
   opacity: 1;

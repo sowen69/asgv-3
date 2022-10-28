@@ -1,10 +1,10 @@
 export default function picture(path: string): HTMLPictureElement {
   const el: HTMLPictureElement = document.createElement('picture');
   const sourcePortrait: HTMLSourceElement = document.createElement('source');
-  const sourceLandscape: HTMLSourceElement = document.createElement('source');
   const fallbackImg: HTMLImageElement = document.createElement('img');
 
-  //TODO: This is fucked :(
+  //TODO: This dosen't work
+  //NOT USED: 20/10/22 Not using this
   fallbackImg.src = path + '_1-1_768.jpg';
   console.log(fallbackImg.src);
   let srcsetString = path + '_1-1_300.jpg' + ' 300w,';

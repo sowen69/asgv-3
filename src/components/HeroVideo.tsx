@@ -6,6 +6,9 @@ import { Suspense, useEffect, useRef } from 'react';
 import dalmore from '../assets/dal_out.mp4';
 gsap.registerPlugin(ScrollTrigger);
 
+// NOTE: If you want to update the background scrub video contact Andy (andy@asgvirtua.com)
+// TODO: This would be so much better as a Three.js 3D scene
+
 export default function HeroVideo() {
   const bgVideo = useRef<HTMLVideoElement>(null);
 
@@ -15,9 +18,6 @@ export default function HeroVideo() {
     const numberOfSections = sections.length;
     const SectionLen = 400;
     const videoEnd = '+=' + (SectionLen * (numberOfSections * 3)).toString();
-    // console.log(numberOfSections);
-    // console.log(sections);
-    // console.log(videoEnd);
 
     bgVideo.current?.load();
     bgVideo.current?.pause();

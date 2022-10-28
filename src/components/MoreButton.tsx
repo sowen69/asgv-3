@@ -3,7 +3,11 @@ export interface MoreButtonProps {
   buttonText: string;
   type?: string;
 }
-
+/**
+ *
+ * @param props
+ * @returns
+ */
 function MoreButton(props: MoreButtonProps) {
   const { href, buttonText, type } = props;
   let classes = '';
